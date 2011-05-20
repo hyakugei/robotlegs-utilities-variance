@@ -1,0 +1,33 @@
+h2. Robotlegs Variance Utility: A variant mediation utility enabling design-by-contract and BDD for robotlegs applications.
+
+The variance utility enhances Robotlegs' standard MediatorMap to enable automatic covariant mediation of view components.
+
+Standard Robotlegs mediation is "invariant", meaning the type of view component added to the Stage must match exactly to the type of view component passed to the IMediatorMap#mapView() method.
+
+Covariant mediation involves mapping a broad type to the IVariantMediatorMap instance. Any component that extends or implements the broad type will have an instance of the mapped mediator automatically created for him.
+
+For example, it is possible to have a mediator created for every instance *and subclass* of Sprite or UIComponent. Obviously this can have a rather dire impact on performance, so the variance utility implements a package filtering mechanism. Whole packages can be successfully ignored for automatic mediation. By default, the "flash.*" and "mx.*" packages are ignored.
+
+Read more about invariance, covariance, and contravariance at wikipedia: "http://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)":http://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
+
+"Official Robotlegs Website":http://www.robotlegs.org
+
+h3. Getting Started
+
+* "Brief Overview":http://github.com/robotlegs/robotlegs-framework/wiki/Overview
+* "Common Problems":http://github.com/robotlegs/robotlegs-framework/wiki/Common-Problems
+* "Best Practices":http://github.com/robotlegs/robotlegs-framework/wiki/Best-Practices
+* "Robotlegs Internals":http://github.com/robotlegs/robotlegs-framework/wiki/Robotlegs-Internals
+
+h3. Code
+
+* "Robotlegs Framework":http://github.com/robotlegs/robotlegs-framework
+* "Robotlegs Demos and Utilities":http://github.com/robotlegs
+
+h2. License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
